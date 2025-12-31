@@ -11,9 +11,13 @@ app.get('/validapi/:key', async(req: Request, res: Response) => {
   const result=await CheckValidKey(key);
   res.send(result);
 });
+
+app.get('/status',(req :Request,res:Response)=>{
+  res.send("healthy");
+})
  
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log('started server.');
 });
 
