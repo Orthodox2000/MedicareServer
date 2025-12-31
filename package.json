@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "eslint",
     "server": "npx ts-node server.ts",
-    "all": "npm-run-all --parallel dev server"
+    "all": "npm-run-all --parallel start server"
   },
   "dependencies": {
     "@types/express": "^5.0.6",
