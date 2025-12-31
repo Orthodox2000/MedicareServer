@@ -6,11 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "npm-run-all --parallel starts server",
-    "starts":" next start",
-    "lint": "eslint",
-    "server": "npx ts-node server.ts",
-    "all": "npm-run-all --parallel start server"
+    "start": "next start", 
+    "lint": "eslint"
   },
   "dependencies": {
     "@types/express": "^5.0.6",

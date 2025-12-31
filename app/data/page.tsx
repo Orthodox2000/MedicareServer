@@ -64,7 +64,7 @@ const DataEntryPage: React.FC = () => {
         });
 
         try { // Send to server
-            const response = await axios.get('http://localhost:3000/add', { params: queryParams });
+            const response = await axios.get('http://localhost:3000/api/add', { params: queryParams });
 
             if (response.status >= 200 && response.status < 300) {
                 // Successful response

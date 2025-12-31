@@ -21,13 +21,13 @@ export default async function CheckValidKey(key:string): Promise<string>
     const keyDoc = await collection.findOne({ 'key': key });
 
     if (!keyDoc) {
-      return `Key "${key}" does not exist.`;
+      return '3'; //key doesnt exist
     }  
     // Check if usage is under limit
     if (keyDoc['useage'] <1000) {
-      return `Key "${key}" exists and is under limit.`;
+      return '0'; //key exist and under limit
     } else {
-      return `Key "${key}" has exceeded its usage limit.`;
+      return '1';// key exist but exceed limit
     }
   } catch (error) {
     console.error('Error checking key:', error);
