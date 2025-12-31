@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "npm-run-all --parallel starts server",
+    "starts":" next start",
     "lint": "eslint",
     "server": "npx ts-node server.ts",
     "all": "npm-run-all --parallel start server"
